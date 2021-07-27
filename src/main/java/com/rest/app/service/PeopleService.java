@@ -17,5 +17,9 @@ public class PeopleService {
 	public List<Person> getPeople(){
 		return prepo.findAll();
 	}
+	
+	public void addPerson(Person person) {
+		prepo.save(person);
+	}
 
 }

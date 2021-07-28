@@ -21,5 +21,14 @@ public class PeopleService {
 	public void addPerson(Person person) {
 		prepo.save(person);
 	}
-
+	
+	public List<Person> getPeople(String city)
+	{
+		return prepo.findByCity(city);
+	}
+	
+	public List<Person> getPeople(Integer start,Integer end)
+	{
+		return prepo.findBetween(start, end);
+	}
 }
